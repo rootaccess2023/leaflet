@@ -1,0 +1,1089 @@
+  [1m[35m (3.4ms)[0m  [1m[35mCREATE DATABASE "leaflet_map_development" ENCODING = 'unicode'[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE DATABASE "leaflet_map_test" ENCODING = 'unicode'[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_try_advisory_lock(76038651082356375)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (2.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (2.4ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+Migrating to CreatePlaces (20240724141540)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (15.9ms)[0m  [1m[35mCREATE TABLE "places" ("id" bigserial primary key, "name" character varying, "longitude" float, "latitude" float, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(76038651082356375)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(76038651082356375)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+Migrating to CreatePlaces (20240724141540)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (5.2ms)[0m  [1m[35mCREATE TABLE "places" ("id" bigserial primary key, "name" character varying, "longitude" float, "latitude" float, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240724141540') RETURNING "version"[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(76038651082356375)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(76038651082356375)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+Migrating to CreatePlces (20240724141640)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (6.5ms)[0m  [1m[35mCREATE TABLE "plces" ("id" bigserial primary key, "name" character varying, "longitude" float, "latitude" float, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240724141640') RETURNING "version"[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT pg_advisory_unlock(76038651082356375)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlce Create (5.3ms)[0m  [1m[32mINSERT INTO "plces" ("name", "longitude", "latitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Place-1"], ["longitude", -70.06], ["latitude", 39.35], ["created_at", "2024-07-24 14:17:44.070243"], ["updated_at", "2024-07-24 14:17:44.070243"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlce Create (1.0ms)[0m  [1m[32mINSERT INTO "plces" ("name", "longitude", "latitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Place-2"], ["longitude", -55.3], ["latitude", 35.2], ["created_at", "2024-07-24 14:17:44.077113"], ["updated_at", "2024-07-24 14:17:44.077113"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlce Create (0.6ms)[0m  [1m[32mINSERT INTO "plces" ("name", "longitude", "latitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Place-3"], ["longitude", -80.2], ["latitude", 25.2], ["created_at", "2024-07-24 14:17:44.079019"], ["updated_at", "2024-07-24 14:17:44.079019"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlce Create (0.6ms)[0m  [1m[32mINSERT INTO "plces" ("name", "longitude", "latitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Place-4"], ["longitude", -90.2], ["latitude", 15.2], ["created_at", "2024-07-24 14:17:44.080473"], ["updated_at", "2024-07-24 14:17:44.080473"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mPlce Load (0.4ms)[0m  [1m[34mSELECT "plces".* FROM "plces" /* loading for pp */ LIMIT $1[0m  [["LIMIT", 11]]
+Started GET "/" for 127.0.0.1 at 2024-07-24 16:19:14 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PlcesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering plces/index.html.erb within layouts/application
+  Rendered plces/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 180)
+  Rendered layout layouts/application.html.erb (Duration: 341.9ms | Allocations: 89644)
+Completed 200 OK in 394ms (Views: 360.3ms | ActiveRecord: 0.0ms | Allocations: 102880)
+
+
+Started GET "/" for 127.0.0.1 at 2024-07-24 16:23:23 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (4.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PlcesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering plces/index.html.erb within layouts/application
+  Rendered plces/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 184)
+  Rendered layout layouts/application.html.erb (Duration: 312.1ms | Allocations: 47264)
+Completed 200 OK in 336ms (Views: 316.5ms | ActiveRecord: 0.0ms | Allocations: 57052)
+
+
+Started GET "/" for 127.0.0.1 at 2024-07-24 16:23:31 +0200
+Processing by PlcesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering plces/index.html.erb within layouts/application
+  Rendered plces/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 4.2ms | Allocations: 1820)
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.0ms | Allocations: 2054)
+
+
+Started GET "/" for 127.0.0.1 at 2024-07-24 16:25:44 +0200
+Processing by PlcesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering plces/index.html.erb within layouts/application
+  Rendered plces/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 100)
+  Rendered layout layouts/application.html.erb (Duration: 2.6ms | Allocations: 2199)
+Completed 200 OK in 6ms (Views: 3.8ms | ActiveRecord: 0.0ms | Allocations: 3810)
+
+
+Started GET "/" for 127.0.0.1 at 2024-07-24 16:28:25 +0200
+Processing by PlcesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering plces/index.html.erb within layouts/application
+  Rendered plces/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 202.4ms | Allocations: 21632)
+Completed 200 OK in 208ms (Views: 205.6ms | ActiveRecord: 0.0ms | Allocations: 21865)
+
+
+Started GET "/" for 127.0.0.1 at 2024-07-24 16:28:44 +0200
+Processing by PlcesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering plces/index.html.erb within layouts/application
+  Rendered plces/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 13.4ms | Allocations: 1828)
+Completed 200 OK in 15ms (Views: 14.3ms | ActiveRecord: 0.0ms | Allocations: 2054)
+
+
+Started GET "/" for 127.0.0.1 at 2024-07-24 16:29:21 +0200
+Processing by PlcesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering plces/index.html.erb within layouts/application
+  Rendered plces/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 217.2ms | Allocations: 21609)
+Completed 200 OK in 225ms (Views: 224.3ms | ActiveRecord: 0.0ms | Allocations: 21834)
+
+
+Started GET "/" for 127.0.0.1 at 2024-07-24 16:29:29 +0200
+Processing by PlcesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering plces/index.html.erb within layouts/application
+  Rendered plces/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 129.9ms | Allocations: 21617)
+Completed 200 OK in 132ms (Views: 131.2ms | ActiveRecord: 0.0ms | Allocations: 21850)
+
+
+Started GET "/" for 127.0.0.1 at 2024-07-24 16:29:40 +0200
+Processing by PlcesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering plces/index.html.erb within layouts/application
+  Rendered plces/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 123.7ms | Allocations: 21622)
+Completed 200 OK in 125ms (Views: 124.7ms | ActiveRecord: 0.0ms | Allocations: 21855)
+
+
+Started GET "/" for 127.0.0.1 at 2024-07-24 16:29:45 +0200
+Processing by PlcesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering plces/index.html.erb within layouts/application
+  Rendered plces/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 125.3ms | Allocations: 21613)
+Completed 200 OK in 126ms (Views: 125.8ms | ActiveRecord: 0.0ms | Allocations: 21839)
+
+
+Started GET "/" for 127.0.0.1 at 2024-07-24 16:30:49 +0200
+Processing by PlcesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering plces/index.html.erb within layouts/application
+  Rendered plces/index.html.erb within layouts/application (Duration: 6.4ms | Allocations: 2089)
+  Rendered layout layouts/application.html.erb (Duration: 6.9ms | Allocations: 2177)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms | Allocations: 3794)
+
+
+  
+ActionView::Template::Error (undefined method `pluck' for nil):
+    1: <div class="w-full">
+    2:     <h1 class="font-bold text-4xl mb-2">Places</h1>
+    3:      <div data-controller="map" data-map-latlong-value="<%=@plces.pluck(:latitude, :longitude)%>">
+    4:         <div data-map-target="container" class="h-[75vh] w-auto"></div>
+    5:     </div>
+    6: </div>
+  
+app/views/plces/index.html.erb:3
+Started GET "/" for 127.0.0.1 at 2024-07-24 16:31:20 +0200
+Processing by PlcesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering plces/index.html.erb within layouts/application
+  [1m[36mPlce Pluck (2.0ms)[0m  [1m[34mSELECT "plces"."latitude", "plces"."longitude" FROM "plces"[0m
+  ↳ app/views/plces/index.html.erb:3
+  Rendered plces/index.html.erb within layouts/application (Duration: 84.2ms | Allocations: 4190)
+  Rendered layout layouts/application.html.erb (Duration: 91.7ms | Allocations: 6338)
+Completed 200 OK in 95ms (Views: 50.6ms | ActiveRecord: 42.3ms | Allocations: 7945)
+
+
+Started GET "/" for 127.0.0.1 at 2024-07-24 16:32:04 +0200
+Processing by PlcesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering plces/index.html.erb within layouts/application
+  [1m[36mPlce Pluck (0.9ms)[0m  [1m[34mSELECT "plces"."latitude", "plces"."longitude" FROM "plces"[0m
+  ↳ app/views/plces/index.html.erb:3
+  Rendered plces/index.html.erb within layouts/application (Duration: 6.0ms | Allocations: 399)
+  Rendered layout layouts/application.html.erb (Duration: 172.9ms | Allocations: 22025)
+Completed 200 OK in 184ms (Views: 178.9ms | ActiveRecord: 0.9ms | Allocations: 22250)
+
+
+Started GET "/" for 127.0.0.1 at 2024-07-24 16:33:04 +0200
+Processing by PlcesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering plces/index.html.erb within layouts/application
+  [1m[36mPlce Pluck (12.4ms)[0m  [1m[34mSELECT "plces"."latitude", "plces"."longitude" FROM "plces"[0m
+  ↳ app/views/plces/index.html.erb:3
+  Rendered plces/index.html.erb within layouts/application (Duration: 13.6ms | Allocations: 391)
+  Rendered layout layouts/application.html.erb (Duration: 16.8ms | Allocations: 2204)
+Completed 200 OK in 18ms (Views: 5.1ms | ActiveRecord: 12.3ms | Allocations: 2429)
+
+
+Started GET "/" for 127.0.0.1 at 2024-07-26 11:06:08 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (153.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PlcesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering plces/index.html.erb within layouts/application
+  [1m[36mPlce Pluck (76.7ms)[0m  [1m[34mSELECT "plces"."latitude", "plces"."longitude" FROM "plces"[0m
+  ↳ app/views/plces/index.html.erb:3
+  Rendered plces/index.html.erb within layouts/application (Duration: 423.7ms | Allocations: 4247)
+  Rendered layout layouts/application.html.erb (Duration: 835.6ms | Allocations: 29873)
+Completed 200 OK in 861ms (Views: 466.8ms | ActiveRecord: 373.3ms | Allocations: 39660)
+
+
+Started GET "/" for 127.0.0.1 at 2024-07-26 11:09:21 +0200
+Processing by PlcesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering plces/index.html.erb within layouts/application
+  [1m[36mPlce Pluck (25.1ms)[0m  [1m[34mSELECT "plces"."latitude", "plces"."longitude" FROM "plces"[0m
+  ↳ app/views/plces/index.html.erb:3
+  Rendered plces/index.html.erb within layouts/application (Duration: 38.8ms | Allocations: 400)
+  Rendered layout layouts/application.html.erb (Duration: 94.2ms | Allocations: 2394)
+Completed 200 OK in 109ms (Views: 73.3ms | ActiveRecord: 25.1ms | Allocations: 2628)
+
+
+Started GET "/" for 127.0.0.1 at 2024-07-26 11:10:01 +0200
+Processing by PlcesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering plces/index.html.erb within layouts/application
+  [1m[36mPlce Pluck (104.5ms)[0m  [1m[34mSELECT "plces"."latitude", "plces"."longitude" FROM "plces"[0m
+  ↳ app/views/plces/index.html.erb:3
+  Rendered plces/index.html.erb within layouts/application (Duration: 109.7ms | Allocations: 398)
+  Rendered layout layouts/application.html.erb (Duration: 221.2ms | Allocations: 2378)
+Completed 200 OK in 229ms (Views: 118.3ms | ActiveRecord: 104.4ms | Allocations: 2611)
+
+
+Started GET "/" for 127.0.0.1 at 2024-07-26 11:10:09 +0200
+Processing by PlcesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering plces/index.html.erb within layouts/application
+  [1m[36mPlce Pluck (13.8ms)[0m  [1m[34mSELECT "plces"."latitude", "plces"."longitude" FROM "plces"[0m
+  ↳ app/views/plces/index.html.erb:3
+  Rendered plces/index.html.erb within layouts/application (Duration: 20.5ms | Allocations: 394)
+  Rendered layout layouts/application.html.erb (Duration: 36.3ms | Allocations: 2383)
+Completed 200 OK in 37ms (Views: 22.9ms | ActiveRecord: 13.8ms | Allocations: 2608)
+
+
+Started GET "/" for 127.0.0.1 at 2024-07-26 11:10:25 +0200
+Processing by PlcesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering plces/index.html.erb within layouts/application
+  [1m[36mPlce Pluck (1.0ms)[0m  [1m[34mSELECT "plces"."latitude", "plces"."longitude" FROM "plces"[0m
+  ↳ app/views/plces/index.html.erb:2
+  Rendered plces/index.html.erb within layouts/application (Duration: 51.0ms | Allocations: 889)
+  Rendered layout layouts/application.html.erb (Duration: 53.7ms | Allocations: 2967)
+Completed 200 OK in 58ms (Views: 6.6ms | ActiveRecord: 48.7ms | Allocations: 4579)
+
+
+Started GET "/" for 127.0.0.1 at 2024-07-26 11:10:38 +0200
+Processing by PlcesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering plces/index.html.erb within layouts/application
+  [1m[36mPlce Pluck (0.2ms)[0m  [1m[34mSELECT "plces"."latitude", "plces"."longitude" FROM "plces"[0m
+  ↳ app/views/plces/index.html.erb:2
+  Rendered plces/index.html.erb within layouts/application (Duration: 16.4ms | Allocations: 871)
+  Rendered layout layouts/application.html.erb (Duration: 24.7ms | Allocations: 4140)
+Completed 200 OK in 28ms (Views: 18.4ms | ActiveRecord: 7.4ms | Allocations: 5745)
+
+
+Started GET "/" for 127.0.0.1 at 2024-07-26 11:10:45 +0200
+Processing by PlcesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering plces/index.html.erb within layouts/application
+  [1m[36mPlce Pluck (12.9ms)[0m  [1m[34mSELECT "plces"."latitude", "plces"."longitude" FROM "plces"[0m
+  ↳ app/views/plces/index.html.erb:2
+  Rendered plces/index.html.erb within layouts/application (Duration: 67.9ms | Allocations: 398)
+  Rendered layout layouts/application.html.erb (Duration: 75.2ms | Allocations: 2233)
+Completed 200 OK in 80ms (Views: 66.0ms | ActiveRecord: 12.6ms | Allocations: 2467)
+
+
+Started GET "/" for 127.0.0.1 at 2024-07-26 11:11:02 +0200
+Processing by PlcesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering plces/index.html.erb within layouts/application
+  [1m[36mPlce Pluck (0.2ms)[0m  [1m[34mSELECT "plces"."latitude", "plces"."longitude" FROM "plces"[0m
+  ↳ app/views/plces/index.html.erb:2
+  Rendered plces/index.html.erb within layouts/application (Duration: 8.3ms | Allocations: 875)
+  Rendered layout layouts/application.html.erb (Duration: 11.0ms | Allocations: 2975)
+Completed 200 OK in 15ms (Views: 6.1ms | ActiveRecord: 6.6ms | Allocations: 4586)
+
+
+Started GET "/" for 127.0.0.1 at 2024-07-26 11:11:22 +0200
+Processing by PlcesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering plces/index.html.erb within layouts/application
+  [1m[36mPlce Pluck (0.1ms)[0m  [1m[34mSELECT "plces"."latitude", "plces"."longitude" FROM "plces"[0m
+  ↳ app/views/plces/index.html.erb:2
+  Rendered plces/index.html.erb within layouts/application (Duration: 3.6ms | Allocations: 873)
+  Rendered layout layouts/application.html.erb (Duration: 5.7ms | Allocations: 2974)
+Completed 200 OK in 17ms (Views: 12.1ms | ActiveRecord: 2.5ms | Allocations: 4580)
+
+
+Started GET "/" for 127.0.0.1 at 2024-07-26 11:12:31 +0200
+Processing by PlcesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering plces/index.html.erb within layouts/application
+  [1m[36mPlce Pluck (0.9ms)[0m  [1m[34mSELECT "plces"."latitude", "plces"."longitude" FROM "plces"[0m
+  ↳ app/views/plces/index.html.erb:2
+  Rendered plces/index.html.erb within layouts/application (Duration: 18.8ms | Allocations: 875)
+  Rendered layout layouts/application.html.erb (Duration: 22.2ms | Allocations: 2981)
+Completed 200 OK in 25ms (Views: 7.0ms | ActiveRecord: 16.4ms | Allocations: 4593)
+
+
+Started GET "/" for 127.0.0.1 at 2024-07-26 11:12:47 +0200
+Processing by PlcesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering plces/index.html.erb within layouts/application
+  [1m[36mPlce Pluck (0.4ms)[0m  [1m[34mSELECT "plces"."latitude", "plces"."longitude" FROM "plces"[0m
+  ↳ app/views/plces/index.html.erb:2
+  Rendered plces/index.html.erb within layouts/application (Duration: 6.2ms | Allocations: 876)
+  Rendered layout layouts/application.html.erb (Duration: 8.6ms | Allocations: 2970)
+Completed 200 OK in 12ms (Views: 5.9ms | ActiveRecord: 4.0ms | Allocations: 4582)
+
+
+Started GET "/" for 127.0.0.1 at 2024-07-26 11:12:56 +0200
+Processing by PlcesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering plces/index.html.erb within layouts/application
+  [1m[36mPlce Pluck (0.1ms)[0m  [1m[34mSELECT "plces"."latitude", "plces"."longitude" FROM "plces"[0m
+  ↳ app/views/plces/index.html.erb:2
+  Rendered plces/index.html.erb within layouts/application (Duration: 12.4ms | Allocations: 870)
+  Rendered layout layouts/application.html.erb (Duration: 15.2ms | Allocations: 2961)
+Completed 200 OK in 18ms (Views: 6.0ms | ActiveRecord: 10.2ms | Allocations: 4568)
+
+
+Started GET "/" for 127.0.0.1 at 2024-07-26 11:13:06 +0200
+Processing by PlcesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering plces/index.html.erb within layouts/application
+  [1m[36mPlce Pluck (0.2ms)[0m  [1m[34mSELECT "plces"."latitude", "plces"."longitude" FROM "plces"[0m
+  ↳ app/views/plces/index.html.erb:2
+  Rendered plces/index.html.erb within layouts/application (Duration: 4.6ms | Allocations: 875)
+  Rendered layout layouts/application.html.erb (Duration: 7.2ms | Allocations: 2966)
+Completed 200 OK in 12ms (Views: 5.8ms | ActiveRecord: 2.5ms | Allocations: 4577)
+
+
+Started GET "/" for 127.0.0.1 at 2024-07-26 11:13:27 +0200
+Processing by PlcesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering plces/index.html.erb within layouts/application
+  [1m[36mPlce Pluck (0.2ms)[0m  [1m[34mSELECT "plces"."latitude", "plces"."longitude" FROM "plces"[0m
+  ↳ app/views/plces/index.html.erb:2
+  Rendered plces/index.html.erb within layouts/application (Duration: 33.0ms | Allocations: 870)
+  Rendered layout layouts/application.html.erb (Duration: 36.0ms | Allocations: 2960)
+Completed 200 OK in 40ms (Views: 24.6ms | ActiveRecord: 13.3ms | Allocations: 4567)
+
+
+Started GET "/" for 127.0.0.1 at 2024-07-26 11:13:35 +0200
+Processing by PlcesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering plces/index.html.erb within layouts/application
+  [1m[36mPlce Pluck (0.1ms)[0m  [1m[34mSELECT "plces"."latitude", "plces"."longitude" FROM "plces"[0m
+  ↳ app/views/plces/index.html.erb:2
+  Rendered plces/index.html.erb within layouts/application (Duration: 3.2ms | Allocations: 875)
+  Rendered layout layouts/application.html.erb (Duration: 6.3ms | Allocations: 2970)
+Completed 200 OK in 9ms (Views: 5.9ms | ActiveRecord: 1.7ms | Allocations: 4581)
+
+
+Started GET "/" for 127.0.0.1 at 2024-07-26 11:13:50 +0200
+Processing by PlcesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering plces/index.html.erb within layouts/application
+  [1m[36mPlce Pluck (0.2ms)[0m  [1m[34mSELECT "plces"."latitude", "plces"."longitude" FROM "plces"[0m
+  ↳ app/views/plces/index.html.erb:2
+  Rendered plces/index.html.erb within layouts/application (Duration: 3.9ms | Allocations: 870)
+  Rendered layout layouts/application.html.erb (Duration: 9.3ms | Allocations: 2952)
+Completed 200 OK in 12ms (Views: 8.1ms | ActiveRecord: 2.4ms | Allocations: 4559)
+
+
+Started GET "/" for 127.0.0.1 at 2024-07-26 11:14:00 +0200
+Processing by PlcesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering plces/index.html.erb within layouts/application
+  [1m[36mPlce Pluck (0.2ms)[0m  [1m[34mSELECT "plces"."latitude", "plces"."longitude" FROM "plces"[0m
+  ↳ app/views/plces/index.html.erb:2
+  Rendered plces/index.html.erb within layouts/application (Duration: 18.2ms | Allocations: 874)
+  Rendered layout layouts/application.html.erb (Duration: 29.8ms | Allocations: 3118)
+Completed 200 OK in 34ms (Views: 16.2ms | ActiveRecord: 15.2ms | Allocations: 4729)
+
+
+Started GET "/" for 127.0.0.1 at 2024-07-26 11:14:05 +0200
+Processing by PlcesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering plces/index.html.erb within layouts/application
+  [1m[36mPlce Pluck (2.2ms)[0m  [1m[34mSELECT "plces"."latitude", "plces"."longitude" FROM "plces"[0m
+  ↳ app/views/plces/index.html.erb:2
+  Rendered plces/index.html.erb within layouts/application (Duration: 3.8ms | Allocations: 391)
+  Rendered layout layouts/application.html.erb (Duration: 23.8ms | Allocations: 2389)
+Completed 200 OK in 25ms (Views: 22.2ms | ActiveRecord: 2.2ms | Allocations: 2614)
+
+
+Started GET "/" for 127.0.0.1 at 2024-07-26 11:14:12 +0200
+Processing by PlcesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering plces/index.html.erb within layouts/application
+  [1m[36mPlce Pluck (27.1ms)[0m  [1m[34mSELECT "plces"."latitude", "plces"."longitude" FROM "plces"[0m
+  ↳ app/views/plces/index.html.erb:2
+  Rendered plces/index.html.erb within layouts/application (Duration: 33.6ms | Allocations: 391)
+  Rendered layout layouts/application.html.erb (Duration: 416.3ms | Allocations: 22036)
+Completed 200 OK in 420ms (Views: 391.3ms | ActiveRecord: 27.0ms | Allocations: 22261)
+
+
+Started GET "/" for 127.0.0.1 at 2024-07-26 11:16:58 +0200
+Processing by PlcesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering plces/index.html.erb within layouts/application
+  [1m[36mPlce Pluck (28.1ms)[0m  [1m[34mSELECT "plces"."latitude", "plces"."longitude" FROM "plces"[0m
+  ↳ app/views/plces/index.html.erb:2
+  Rendered plces/index.html.erb within layouts/application (Duration: 36.9ms | Allocations: 391)
+  Rendered layout layouts/application.html.erb (Duration: 276.6ms | Allocations: 22021)
+Completed 200 OK in 285ms (Views: 252.6ms | ActiveRecord: 27.8ms | Allocations: 22246)
+
+
+Started GET "/" for 127.0.0.1 at 2024-07-26 11:17:12 +0200
+Processing by PlcesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering plces/index.html.erb within layouts/application
+  [1m[36mPlce Pluck (2.1ms)[0m  [1m[34mSELECT "plces"."latitude", "plces"."longitude" FROM "plces"[0m
+  ↳ app/views/plces/index.html.erb:2
+  Rendered plces/index.html.erb within layouts/application (Duration: 5.9ms | Allocations: 391)
+  Rendered layout layouts/application.html.erb (Duration: 19.3ms | Allocations: 2276)
+Completed 200 OK in 20ms (Views: 17.6ms | ActiveRecord: 2.1ms | Allocations: 2501)
+
+
+Started GET "/" for 127.0.0.1 at 2024-07-26 11:22:34 +0200
+Processing by PlcesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering plces/index.html.erb within layouts/application
+  [1m[36mPlce Pluck (124.7ms)[0m  [1m[34mSELECT "plces"."latitude", "plces"."longitude" FROM "plces"[0m
+  ↳ app/views/plces/index.html.erb:2
+  Rendered plces/index.html.erb within layouts/application (Duration: 137.3ms | Allocations: 391)
+  Rendered layout layouts/application.html.erb (Duration: 313.0ms | Allocations: 21988)
+Completed 200 OK in 317ms (Views: 190.7ms | ActiveRecord: 124.7ms | Allocations: 22213)
+
+
+Started GET "/lib/philippines-with-regions_.geojson" for 127.0.0.1 at 2024-07-26 11:22:37 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/lib/philippines-with-regions_.geojson"):
+  
+Started GET "/" for 127.0.0.1 at 2024-07-26 11:23:00 +0200
+Processing by PlcesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering plces/index.html.erb within layouts/application
+  [1m[36mPlce Pluck (11.8ms)[0m  [1m[34mSELECT "plces"."latitude", "plces"."longitude" FROM "plces"[0m
+  ↳ app/views/plces/index.html.erb:2
+  Rendered plces/index.html.erb within layouts/application (Duration: 39.3ms | Allocations: 392)
+  Rendered layout layouts/application.html.erb (Duration: 194.6ms | Allocations: 22015)
+Completed 200 OK in 207ms (Views: 188.2ms | ActiveRecord: 11.8ms | Allocations: 22240)
+
+
+Started GET "/lib/philippines-with-regions_.geojson" for 127.0.0.1 at 2024-07-26 11:23:04 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/lib/philippines-with-regions_.geojson"):
+  
+Started GET "/" for 127.0.0.1 at 2024-07-26 11:24:25 +0200
+Processing by PlcesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering plces/index.html.erb within layouts/application
+  [1m[36mPlce Pluck (14.3ms)[0m  [1m[34mSELECT "plces"."latitude", "plces"."longitude" FROM "plces"[0m
+  ↳ app/views/plces/index.html.erb:2
+  Rendered plces/index.html.erb within layouts/application (Duration: 28.4ms | Allocations: 391)
+  Rendered layout layouts/application.html.erb (Duration: 255.4ms | Allocations: 22013)
+Completed 200 OK in 266ms (Views: 247.0ms | ActiveRecord: 15.5ms | Allocations: 22238)
+
+
+Started GET "/app/assets/philippines-with-regions_.geojson" for 127.0.0.1 at 2024-07-26 11:24:28 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/app/assets/philippines-with-regions_.geojson"):
+  
+Started GET "/" for 127.0.0.1 at 2024-07-26 11:25:43 +0200
+Processing by PlcesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering plces/index.html.erb within layouts/application
+  [1m[36mPlce Pluck (14.0ms)[0m  [1m[34mSELECT "plces"."latitude", "plces"."longitude" FROM "plces"[0m
+  ↳ app/views/plces/index.html.erb:2
+  Rendered plces/index.html.erb within layouts/application (Duration: 36.9ms | Allocations: 391)
+  Rendered layout layouts/application.html.erb (Duration: 173.6ms | Allocations: 21996)
+Completed 200 OK in 191ms (Views: 166.1ms | ActiveRecord: 13.9ms | Allocations: 22220)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/philippines-with-regions_.geojson"):
+  
+Started GET "/" for 127.0.0.1 at 2024-07-26 11:25:57 +0200
+Processing by PlcesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering plces/index.html.erb within layouts/application
+  [1m[36mPlce Pluck (16.8ms)[0m  [1m[34mSELECT "plces"."latitude", "plces"."longitude" FROM "plces"[0m
+  ↳ app/views/plces/index.html.erb:2
+  Rendered plces/index.html.erb within layouts/application (Duration: 18.6ms | Allocations: 391)
+  Rendered layout layouts/application.html.erb (Duration: 24.3ms | Allocations: 2256)
+Completed 200 OK in 27ms (Views: 8.7ms | ActiveRecord: 16.7ms | Allocations: 2480)
+
+
+Started GET "/" for 127.0.0.1 at 2024-07-26 11:26:04 +0200
+Processing by PlcesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering plces/index.html.erb within layouts/application
+  [1m[36mPlce Pluck (2.9ms)[0m  [1m[34mSELECT "plces"."latitude", "plces"."longitude" FROM "plces"[0m
+  ↳ app/views/plces/index.html.erb:2
+  Rendered plces/index.html.erb within layouts/application (Duration: 9.6ms | Allocations: 391)
+  Rendered layout layouts/application.html.erb (Duration: 24.0ms | Allocations: 2258)
+Completed 200 OK in 28ms (Views: 23.1ms | ActiveRecord: 2.7ms | Allocations: 2482)
+
+
+Started GET "/" for 127.0.0.1 at 2024-07-26 11:28:37 +0200
+Processing by PlcesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering plces/index.html.erb within layouts/application
+  [1m[36mPlce Pluck (19.0ms)[0m  [1m[34mSELECT "plces"."latitude", "plces"."longitude" FROM "plces"[0m
+  ↳ app/views/plces/index.html.erb:2
+  Rendered plces/index.html.erb within layouts/application (Duration: 27.4ms | Allocations: 391)
+  Rendered layout layouts/application.html.erb (Duration: 206.7ms | Allocations: 22003)
+Completed 200 OK in 214ms (Views: 190.5ms | ActiveRecord: 18.7ms | Allocations: 22227)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/philippines-with-regions_.geojson"):
+  
+Started GET "/" for 127.0.0.1 at 2024-07-26 11:28:51 +0200
+Processing by PlcesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering plces/index.html.erb within layouts/application
+  [1m[36mPlce Pluck (6.7ms)[0m  [1m[34mSELECT "plces"."latitude", "plces"."longitude" FROM "plces"[0m
+  ↳ app/views/plces/index.html.erb:2
+  Rendered plces/index.html.erb within layouts/application (Duration: 10.3ms | Allocations: 391)
+  Rendered layout layouts/application.html.erb (Duration: 17.4ms | Allocations: 2263)
+Completed 200 OK in 21ms (Views: 12.3ms | ActiveRecord: 6.7ms | Allocations: 2487)
+
+
+Started GET "/" for 127.0.0.1 at 2024-07-26 11:29:34 +0200
+Processing by PlcesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering plces/index.html.erb within layouts/application
+  [1m[36mPlce Pluck (5.0ms)[0m  [1m[34mSELECT "plces"."latitude", "plces"."longitude" FROM "plces"[0m
+  ↳ app/views/plces/index.html.erb:2
+  Rendered plces/index.html.erb within layouts/application (Duration: 17.3ms | Allocations: 391)
+  Rendered layout layouts/application.html.erb (Duration: 208.0ms | Allocations: 22029)
+Completed 200 OK in 225ms (Views: 210.8ms | ActiveRecord: 4.7ms | Allocations: 22254)
+
+
+Started GET "/" for 127.0.0.1 at 2024-07-26 11:30:29 +0200
+Processing by PlcesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering plces/index.html.erb within layouts/application
+  [1m[36mPlce Pluck (1.0ms)[0m  [1m[34mSELECT "plces"."latitude", "plces"."longitude" FROM "plces"[0m
+  ↳ app/views/plces/index.html.erb:2
+  Rendered plces/index.html.erb within layouts/application (Duration: 5.4ms | Allocations: 391)
+  Rendered layout layouts/application.html.erb (Duration: 223.2ms | Allocations: 21979)
+Completed 200 OK in 228ms (Views: 224.7ms | ActiveRecord: 0.9ms | Allocations: 22204)
+
+
+Started GET "/" for 127.0.0.1 at 2024-07-26 11:30:58 +0200
+Processing by PlcesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering plces/index.html.erb within layouts/application
+  [1m[36mPlce Pluck (31.3ms)[0m  [1m[34mSELECT "plces"."latitude", "plces"."longitude" FROM "plces"[0m
+  ↳ app/views/plces/index.html.erb:2
+  Rendered plces/index.html.erb within layouts/application (Duration: 34.8ms | Allocations: 391)
+  Rendered layout layouts/application.html.erb (Duration: 209.9ms | Allocations: 21982)
+Completed 200 OK in 216ms (Views: 181.3ms | ActiveRecord: 31.2ms | Allocations: 22207)
+
+
+Started GET "/" for 127.0.0.1 at 2024-07-26 11:31:20 +0200
+Processing by PlcesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering plces/index.html.erb within layouts/application
+  [1m[36mPlce Pluck (98.8ms)[0m  [1m[34mSELECT "plces"."latitude", "plces"."longitude" FROM "plces"[0m
+  ↳ app/views/plces/index.html.erb:2
+  Rendered plces/index.html.erb within layouts/application (Duration: 108.5ms | Allocations: 391)
+  Rendered layout layouts/application.html.erb (Duration: 117.1ms | Allocations: 2195)
+Completed 200 OK in 128ms (Views: 26.0ms | ActiveRecord: 98.8ms | Allocations: 2420)
+
+
+Started GET "/" for 127.0.0.1 at 2024-07-26 11:31:39 +0200
+Processing by PlcesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering plces/index.html.erb within layouts/application
+  [1m[36mPlce Pluck (5.5ms)[0m  [1m[34mSELECT "plces"."latitude", "plces"."longitude" FROM "plces"[0m
+  ↳ app/views/plces/index.html.erb:2
+  Rendered plces/index.html.erb within layouts/application (Duration: 7.5ms | Allocations: 391)
+  Rendered layout layouts/application.html.erb (Duration: 17.3ms | Allocations: 2276)
+Completed 200 OK in 20ms (Views: 13.0ms | ActiveRecord: 5.5ms | Allocations: 2501)
+
+
+Started GET "/" for 127.0.0.1 at 2024-07-26 11:31:45 +0200
+Processing by PlcesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering plces/index.html.erb within layouts/application
+  [1m[36mPlce Pluck (26.4ms)[0m  [1m[34mSELECT "plces"."latitude", "plces"."longitude" FROM "plces"[0m
+  ↳ app/views/plces/index.html.erb:2
+  Rendered plces/index.html.erb within layouts/application (Duration: 32.9ms | Allocations: 391)
+  Rendered layout layouts/application.html.erb (Duration: 48.0ms | Allocations: 2260)
+Completed 200 OK in 53ms (Views: 24.8ms | ActiveRecord: 26.2ms | Allocations: 2485)
+
+
+  [1m[36mPlce Load (2.0ms)[0m  [1m[34mSELECT "plces".* FROM "plces" /* loading for pp */ LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mActiveRecord::SchemaMigration Load (2.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlce Create (4.5ms)[0m  [1m[32mINSERT INTO "plces" ("name", "longitude", "latitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Place 10"], ["longitude", 120.9934], ["latitude", 14.0026], ["created_at", "2024-07-26 09:43:28.633782"], ["updated_at", "2024-07-26 09:43:28.633782"]]
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlce Create (0.6ms)[0m  [1m[32mINSERT INTO "plces" ("name", "longitude", "latitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Place 11"], ["longitude", 124.1377], ["latitude", 9.724], ["created_at", "2024-07-26 09:43:28.641079"], ["updated_at", "2024-07-26 09:43:28.641079"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlce Create (0.6ms)[0m  [1m[32mINSERT INTO "plces" ("name", "longitude", "latitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Place 12"], ["longitude", 120.979], ["latitude", 14.585], ["created_at", "2024-07-26 09:43:28.642659"], ["updated_at", "2024-07-26 09:43:28.642659"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlce Create (0.5ms)[0m  [1m[32mINSERT INTO "plces" ("name", "longitude", "latitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Place 13"], ["longitude", 120.9831], ["latitude", 14.5811], ["created_at", "2024-07-26 09:43:28.644144"], ["updated_at", "2024-07-26 09:43:28.644144"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlce Create (1.1ms)[0m  [1m[32mINSERT INTO "plces" ("name", "longitude", "latitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Place 14"], ["longitude", 121.0786], ["latitude", 16.9324], ["created_at", "2024-07-26 09:43:28.645663"], ["updated_at", "2024-07-26 09:43:28.645663"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlce Create (0.6ms)[0m  [1m[32mINSERT INTO "plces" ("name", "longitude", "latitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Place 15"], ["longitude", 118.777], ["latitude", 10.2127], ["created_at", "2024-07-26 09:43:28.647730"], ["updated_at", "2024-07-26 09:43:28.647730"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlce Create (1.0ms)[0m  [1m[32mINSERT INTO "plces" ("name", "longitude", "latitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Place 16"], ["longitude", 121.9284], ["latitude", 11.9651], ["created_at", "2024-07-26 09:43:28.649200"], ["updated_at", "2024-07-26 09:43:28.649200"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlce Create (0.6ms)[0m  [1m[32mINSERT INTO "plces" ("name", "longitude", "latitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Place 17"], ["longitude", 123.6856], ["latitude", 13.2578], ["created_at", "2024-07-26 09:43:28.651310"], ["updated_at", "2024-07-26 09:43:28.651310"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlce Create (0.6ms)[0m  [1m[32mINSERT INTO "plces" ("name", "longitude", "latitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Place 18"], ["longitude", 123.3542], ["latitude", 12.9956], ["created_at", "2024-07-26 09:43:28.652896"], ["updated_at", "2024-07-26 09:43:28.652896"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlce Create (0.8ms)[0m  [1m[32mINSERT INTO "plces" ("name", "longitude", "latitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Place 19"], ["longitude", 120.3883], ["latitude", 17.5759], ["created_at", "2024-07-26 09:43:28.660480"], ["updated_at", "2024-07-26 09:43:28.660480"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlce Create (0.7ms)[0m  [1m[32mINSERT INTO "plces" ("name", "longitude", "latitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Place 20"], ["longitude", 126.157], ["latitude", 9.8408], ["created_at", "2024-07-26 09:43:28.662317"], ["updated_at", "2024-07-26 09:43:28.662317"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlce Create (0.6ms)[0m  [1m[32mINSERT INTO "plces" ("name", "longitude", "latitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Place 21"], ["longitude", 119.945], ["latitude", 8.874], ["created_at", "2024-07-26 09:43:28.663949"], ["updated_at", "2024-07-26 09:43:28.663949"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlce Create (0.7ms)[0m  [1m[32mINSERT INTO "plces" ("name", "longitude", "latitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Place 22"], ["longitude", 120.9772], ["latitude", 14.5828], ["created_at", "2024-07-26 09:43:28.666127"], ["updated_at", "2024-07-26 09:43:28.666127"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlce Create (1.0ms)[0m  [1m[32mINSERT INTO "plces" ("name", "longitude", "latitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Place 23"], ["longitude", 121.4156], ["latitude", 14.234], ["created_at", "2024-07-26 09:43:28.667734"], ["updated_at", "2024-07-26 09:43:28.667734"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlce Create (0.6ms)[0m  [1m[32mINSERT INTO "plces" ("name", "longitude", "latitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Place 24"], ["longitude", 125.25], ["latitude", 7.0833], ["created_at", "2024-07-26 09:43:28.669659"], ["updated_at", "2024-07-26 09:43:28.669659"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mPlce Load (1.6ms)[0m  [1m[34mSELECT "plces".* FROM "plces" /* loading for pp */ LIMIT $1[0m  [["LIMIT", 11]]
+Started GET "/" for 127.0.0.1 at 2024-07-26 11:45:23 +0200
+Processing by PlcesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering plces/index.html.erb within layouts/application
+  [1m[36mPlce Pluck (36.1ms)[0m  [1m[34mSELECT "plces"."latitude", "plces"."longitude" FROM "plces"[0m
+  ↳ app/views/plces/index.html.erb:2
+  Rendered plces/index.html.erb within layouts/application (Duration: 58.1ms | Allocations: 3248)
+  Rendered layout layouts/application.html.erb (Duration: 91.8ms | Allocations: 5120)
+Completed 200 OK in 108ms (Views: 53.7ms | ActiveRecord: 46.4ms | Allocations: 5345)
+
+
+  [1m[36mPlce Load (1.0ms)[0m  [1m[34mSELECT "plces".* FROM "plces" ORDER BY "plces"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlce Destroy (3.9ms)[0m  [1m[31mDELETE FROM "plces" WHERE "plces"."id" = $1[0m  [["id", 1]]
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mPlce Load (0.6ms)[0m  [1m[34mSELECT "plces".* FROM "plces" ORDER BY "plces"."id" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 1], ["OFFSET", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlce Destroy (1.0ms)[0m  [1m[31mDELETE FROM "plces" WHERE "plces"."id" = $1[0m  [["id", 3]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mPlce Load (0.4ms)[0m  [1m[34mSELECT "plces".* FROM "plces" ORDER BY "plces"."id" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 1], ["OFFSET", 2]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlce Destroy (1.8ms)[0m  [1m[31mDELETE FROM "plces" WHERE "plces"."id" = $1[0m  [["id", 5]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/" for 127.0.0.1 at 2024-07-26 11:46:45 +0200
+Processing by PlcesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering plces/index.html.erb within layouts/application
+  [1m[36mPlce Pluck (58.7ms)[0m  [1m[34mSELECT "plces"."latitude", "plces"."longitude" FROM "plces"[0m
+  ↳ app/views/plces/index.html.erb:2
+  Rendered plces/index.html.erb within layouts/application (Duration: 64.5ms | Allocations: 453)
+  Rendered layout layouts/application.html.erb (Duration: 87.0ms | Allocations: 2264)
+Completed 200 OK in 95ms (Views: 32.1ms | ActiveRecord: 58.6ms | Allocations: 2490)
+
+
+  [1m[36mPlce Load (1.1ms)[0m  [1m[34mSELECT "plces".* FROM "plces"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlce Destroy (1.5ms)[0m  [1m[31mDELETE FROM "plces" WHERE "plces"."id" = $1[0m  [["id", 2]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlce Destroy (0.3ms)[0m  [1m[31mDELETE FROM "plces" WHERE "plces"."id" = $1[0m  [["id", 4]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlce Destroy (0.3ms)[0m  [1m[31mDELETE FROM "plces" WHERE "plces"."id" = $1[0m  [["id", 6]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlce Destroy (0.9ms)[0m  [1m[31mDELETE FROM "plces" WHERE "plces"."id" = $1[0m  [["id", 7]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlce Destroy (0.8ms)[0m  [1m[31mDELETE FROM "plces" WHERE "plces"."id" = $1[0m  [["id", 8]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlce Destroy (1.1ms)[0m  [1m[31mDELETE FROM "plces" WHERE "plces"."id" = $1[0m  [["id", 9]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlce Destroy (0.4ms)[0m  [1m[31mDELETE FROM "plces" WHERE "plces"."id" = $1[0m  [["id", 10]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlce Destroy (0.4ms)[0m  [1m[31mDELETE FROM "plces" WHERE "plces"."id" = $1[0m  [["id", 11]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlce Destroy (0.9ms)[0m  [1m[31mDELETE FROM "plces" WHERE "plces"."id" = $1[0m  [["id", 12]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlce Destroy (0.5ms)[0m  [1m[31mDELETE FROM "plces" WHERE "plces"."id" = $1[0m  [["id", 13]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlce Destroy (0.3ms)[0m  [1m[31mDELETE FROM "plces" WHERE "plces"."id" = $1[0m  [["id", 14]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlce Destroy (0.3ms)[0m  [1m[31mDELETE FROM "plces" WHERE "plces"."id" = $1[0m  [["id", 15]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlce Destroy (0.3ms)[0m  [1m[31mDELETE FROM "plces" WHERE "plces"."id" = $1[0m  [["id", 16]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlce Destroy (0.3ms)[0m  [1m[31mDELETE FROM "plces" WHERE "plces"."id" = $1[0m  [["id", 17]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlce Destroy (0.3ms)[0m  [1m[31mDELETE FROM "plces" WHERE "plces"."id" = $1[0m  [["id", 18]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlce Destroy (0.3ms)[0m  [1m[31mDELETE FROM "plces" WHERE "plces"."id" = $1[0m  [["id", 19]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlce Create (2.8ms)[0m  [1m[32mINSERT INTO "plces" ("name", "longitude", "latitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Place 10"], ["longitude", 120.9934], ["latitude", 14.0026], ["created_at", "2024-07-26 09:47:07.453738"], ["updated_at", "2024-07-26 09:47:07.453738"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlce Create (0.7ms)[0m  [1m[32mINSERT INTO "plces" ("name", "longitude", "latitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Place 11"], ["longitude", 124.1377], ["latitude", 9.724], ["created_at", "2024-07-26 09:47:07.458133"], ["updated_at", "2024-07-26 09:47:07.458133"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlce Create (0.7ms)[0m  [1m[32mINSERT INTO "plces" ("name", "longitude", "latitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Place 12"], ["longitude", 120.979], ["latitude", 14.585], ["created_at", "2024-07-26 09:47:07.459811"], ["updated_at", "2024-07-26 09:47:07.459811"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlce Create (0.6ms)[0m  [1m[32mINSERT INTO "plces" ("name", "longitude", "latitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Place 13"], ["longitude", 120.9831], ["latitude", 14.5811], ["created_at", "2024-07-26 09:47:07.461435"], ["updated_at", "2024-07-26 09:47:07.461435"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlce Create (0.5ms)[0m  [1m[32mINSERT INTO "plces" ("name", "longitude", "latitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Place 14"], ["longitude", 121.0786], ["latitude", 16.9324], ["created_at", "2024-07-26 09:47:07.462982"], ["updated_at", "2024-07-26 09:47:07.462982"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlce Create (0.6ms)[0m  [1m[32mINSERT INTO "plces" ("name", "longitude", "latitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Place 15"], ["longitude", 118.777], ["latitude", 10.2127], ["created_at", "2024-07-26 09:47:07.464418"], ["updated_at", "2024-07-26 09:47:07.464418"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlce Create (0.6ms)[0m  [1m[32mINSERT INTO "plces" ("name", "longitude", "latitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Place 16"], ["longitude", 121.9284], ["latitude", 11.9651], ["created_at", "2024-07-26 09:47:07.465837"], ["updated_at", "2024-07-26 09:47:07.465837"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlce Create (0.6ms)[0m  [1m[32mINSERT INTO "plces" ("name", "longitude", "latitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Place 17"], ["longitude", 123.6856], ["latitude", 13.2578], ["created_at", "2024-07-26 09:47:07.467286"], ["updated_at", "2024-07-26 09:47:07.467286"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlce Create (0.6ms)[0m  [1m[32mINSERT INTO "plces" ("name", "longitude", "latitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Place 18"], ["longitude", 123.3542], ["latitude", 12.9956], ["created_at", "2024-07-26 09:47:07.468825"], ["updated_at", "2024-07-26 09:47:07.468825"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlce Create (1.6ms)[0m  [1m[32mINSERT INTO "plces" ("name", "longitude", "latitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Place 19"], ["longitude", 120.3883], ["latitude", 17.5759], ["created_at", "2024-07-26 09:47:07.476607"], ["updated_at", "2024-07-26 09:47:07.476607"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlce Create (0.6ms)[0m  [1m[32mINSERT INTO "plces" ("name", "longitude", "latitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Place 20"], ["longitude", 126.157], ["latitude", 9.8408], ["created_at", "2024-07-26 09:47:07.479263"], ["updated_at", "2024-07-26 09:47:07.479263"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlce Create (0.6ms)[0m  [1m[32mINSERT INTO "plces" ("name", "longitude", "latitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Place 21"], ["longitude", 119.945], ["latitude", 8.874], ["created_at", "2024-07-26 09:47:07.480784"], ["updated_at", "2024-07-26 09:47:07.480784"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlce Create (0.7ms)[0m  [1m[32mINSERT INTO "plces" ("name", "longitude", "latitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Place 22"], ["longitude", 120.9772], ["latitude", 14.5828], ["created_at", "2024-07-26 09:47:07.482710"], ["updated_at", "2024-07-26 09:47:07.482710"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlce Create (0.6ms)[0m  [1m[32mINSERT INTO "plces" ("name", "longitude", "latitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Place 23"], ["longitude", 121.4156], ["latitude", 14.234], ["created_at", "2024-07-26 09:47:07.484375"], ["updated_at", "2024-07-26 09:47:07.484375"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlce Create (0.6ms)[0m  [1m[32mINSERT INTO "plces" ("name", "longitude", "latitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Place 24"], ["longitude", 125.25], ["latitude", 7.0833], ["created_at", "2024-07-26 09:47:07.485808"], ["updated_at", "2024-07-26 09:47:07.485808"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/" for 127.0.0.1 at 2024-07-26 11:47:09 +0200
+Processing by PlcesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering plces/index.html.erb within layouts/application
+  [1m[36mPlce Pluck (1.3ms)[0m  [1m[34mSELECT "plces"."latitude", "plces"."longitude" FROM "plces"[0m
+  ↳ app/views/plces/index.html.erb:2
+  Rendered plces/index.html.erb within layouts/application (Duration: 3.6ms | Allocations: 448)
+  Rendered layout layouts/application.html.erb (Duration: 33.8ms | Allocations: 2264)
+Completed 200 OK in 36ms (Views: 33.5ms | ActiveRecord: 1.2ms | Allocations: 2489)
+
+
+Started GET "/" for 127.0.0.1 at 2024-07-26 11:47:44 +0200
+Processing by PlcesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering plces/index.html.erb within layouts/application
+  [1m[36mPlce Pluck (17.1ms)[0m  [1m[34mSELECT "plces"."latitude", "plces"."longitude" FROM "plces"[0m
+  ↳ app/views/plces/index.html.erb:2
+  Rendered plces/index.html.erb within layouts/application (Duration: 21.3ms | Allocations: 448)
+  Rendered layout layouts/application.html.erb (Duration: 42.5ms | Allocations: 2250)
+Completed 200 OK in 45ms (Views: 26.5ms | ActiveRecord: 17.1ms | Allocations: 2476)
+
+
+  [1m[36mActiveRecord::SchemaMigration Load (2.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (2.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlce Create (4.8ms)[0m  [1m[32mINSERT INTO "plces" ("name", "longitude", "latitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Oriental Game Limited"], ["longitude", 121.0231694], ["latitude", 14.53395565], ["created_at", "2024-07-29 11:24:12.972492"], ["updated_at", "2024-07-29 11:24:12.972492"]]
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlce Create (1.0ms)[0m  [1m[32mINSERT INTO "plces" ("name", "longitude", "latitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Far Eastern Capital Limited"], ["longitude", 121.021268], ["latitude", 14.55635656], ["created_at", "2024-07-29 11:24:12.980703"], ["updated_at", "2024-07-29 11:24:12.980703"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlce Create (1.2ms)[0m  [1m[32mINSERT INTO "plces" ("name", "longitude", "latitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Marco Polo Enterprises Limited"], ["longitude", 121.0206212], ["latitude", 14.55776705], ["created_at", "2024-07-29 11:24:12.982942"], ["updated_at", "2024-07-29 11:24:12.982942"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlce Create (0.7ms)[0m  [1m[32mINSERT INTO "plces" ("name", "longitude", "latitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Imperial Choice Limited"], ["longitude", 121.0129675], ["latitude", 14.56028594], ["created_at", "2024-07-29 11:24:12.985302"], ["updated_at", "2024-07-29 11:24:12.985302"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlce Create (0.8ms)[0m  [1m[32mINSERT INTO "plces" ("name", "longitude", "latitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Libo Consolidated Limited"], ["longitude", 121.0197153], ["latitude", 14.55859484], ["created_at", "2024-07-29 11:24:12.987254"], ["updated_at", "2024-07-29 11:24:12.987254"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlce Create (0.7ms)[0m  [1m[32mINSERT INTO "plces" ("name", "longitude", "latitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Fortuneport Enterprises Limited"], ["longitude", 121.0129675], ["latitude", 14.56028594], ["created_at", "2024-07-29 11:24:12.989529"], ["updated_at", "2024-07-29 11:24:12.989529"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlce Create (0.7ms)[0m  [1m[32mINSERT INTO "plces" ("name", "longitude", "latitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "SC World Development Group Limited"], ["longitude", 121.0197153], ["latitude", 14.55859484], ["created_at", "2024-07-29 11:24:12.991441"], ["updated_at", "2024-07-29 11:24:12.991441"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlce Create (0.6ms)[0m  [1m[32mINSERT INTO "plces" ("name", "longitude", "latitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Golden Dragon Empire Limited"], ["longitude", 121.0101568], ["latitude", 14.55910681], ["created_at", "2024-07-29 11:24:12.993255"], ["updated_at", "2024-07-29 11:24:12.993255"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlce Create (1.2ms)[0m  [1m[32mINSERT INTO "plces" ("name", "longitude", "latitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "VIP Global Solutions Limited"], ["longitude", 121.0129675], ["latitude", 14.56028594], ["created_at", "2024-07-29 11:24:12.995064"], ["updated_at", "2024-07-29 11:24:12.995064"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlce Create (0.8ms)[0m  [1m[32mINSERT INTO "plces" ("name", "longitude", "latitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "MG Universal Link Limited"], ["longitude", 121.0197153], ["latitude", 14.55859484], ["created_at", "2024-07-29 11:24:13.004182"], ["updated_at", "2024-07-29 11:24:13.004182"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlce Create (0.6ms)[0m  [1m[32mINSERT INTO "plces" ("name", "longitude", "latitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "AG Interpacific Resources Limited"], ["longitude", 121.0101568], ["latitude", 14.55910681], ["created_at", "2024-07-29 11:24:13.006215"], ["updated_at", "2024-07-29 11:24:13.006215"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlce Create (1.1ms)[0m  [1m[32mINSERT INTO "plces" ("name", "longitude", "latitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "BBIN International Limited"], ["longitude", 0.0], ["latitude", 0.0], ["created_at", "2024-07-29 11:24:13.007745"], ["updated_at", "2024-07-29 11:24:13.007745"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlce Create (0.7ms)[0m  [1m[32mINSERT INTO "plces" ("name", "longitude", "latitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Eastern Hawaii Leisure Company Limited"], ["longitude", 121.0197153], ["latitude", 14.55859484], ["created_at", "2024-07-29 11:24:13.009871"], ["updated_at", "2024-07-29 11:24:13.009871"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlce Create (0.9ms)[0m  [1m[32mINSERT INTO "plces" ("name", "longitude", "latitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "PT Transpacific Company Limited"], ["longitude", 121.0142257], ["latitude", 14.55788729], ["created_at", "2024-07-29 11:24:13.012323"], ["updated_at", "2024-07-29 11:24:13.012323"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlce Create (0.6ms)[0m  [1m[32mINSERT INTO "plces" ("name", "longitude", "latitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "OG Global Access Limited"], ["longitude", 121.0197153], ["latitude", 14.55859484], ["created_at", "2024-07-29 11:24:13.014229"], ["updated_at", "2024-07-29 11:24:13.014229"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlce Create (1.5ms)[0m  [1m[32mINSERT INTO "plces" ("name", "longitude", "latitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Dynamic System Limited"], ["longitude", 121.0205297], ["latitude", 14.55909948], ["created_at", "2024-07-29 11:24:13.015843"], ["updated_at", "2024-07-29 11:24:13.015843"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlce Create (0.8ms)[0m  [1m[32mINSERT INTO "plces" ("name", "longitude", "latitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Leading Reward Limited"], ["longitude", 121.0203128], ["latitude", 14.56014756], ["created_at", "2024-07-29 11:24:13.018929"], ["updated_at", "2024-07-29 11:24:13.018929"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlce Create (0.6ms)[0m  [1m[32mINSERT INTO "plces" ("name", "longitude", "latitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Kingwell International Group Limited"], ["longitude", 121.0170587], ["latitude", 14.56090119], ["created_at", "2024-07-29 11:24:13.021040"], ["updated_at", "2024-07-29 11:24:13.021040"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlce Create (0.5ms)[0m  [1m[32mINSERT INTO "plces" ("name", "longitude", "latitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Defun Global Investment"], ["longitude", 121.0182572], ["latitude", 14.51924845], ["created_at", "2024-07-29 11:24:13.022598"], ["updated_at", "2024-07-29 11:24:13.022598"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlce Create (1.8ms)[0m  [1m[32mINSERT INTO "plces" ("name", "longitude", "latitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Inner Strong Limited"], ["longitude", 121.0180499], ["latitude", 14.51905769], ["created_at", "2024-07-29 11:24:13.024081"], ["updated_at", "2024-07-29 11:24:13.024081"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlce Create (2.0ms)[0m  [1m[32mINSERT INTO "plces" ("name", "longitude", "latitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Four Leaf Technology Inc."], ["longitude", 121.0180499], ["latitude", 14.51905769], ["created_at", "2024-07-29 11:24:13.026784"], ["updated_at", "2024-07-29 11:24:13.026784"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlce Create (0.7ms)[0m  [1m[32mINSERT INTO "plces" ("name", "longitude", "latitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Smarc Group International Limited"], ["longitude", 120.2805797], ["latitude", 14.83083062], ["created_at", "2024-07-29 11:24:13.029810"], ["updated_at", "2024-07-29 11:24:13.029810"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlce Create (0.6ms)[0m  [1m[32mINSERT INTO "plces" ("name", "longitude", "latitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Ximax Holding Limited"], ["longitude", 121.0180499], ["latitude", 14.51905769], ["created_at", "2024-07-29 11:24:13.031567"], ["updated_at", "2024-07-29 11:24:13.031567"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlce Create (5.7ms)[0m  [1m[32mINSERT INTO "plces" ("name", "longitude", "latitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Puerto Galera Holdings Ltd."], ["longitude", 121.0398618], ["latitude", 14.64186192], ["created_at", "2024-07-29 11:24:13.033165"], ["updated_at", "2024-07-29 11:24:13.033165"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlce Create (8.7ms)[0m  [1m[32mINSERT INTO "plces" ("name", "longitude", "latitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "New Wave Infotech Limited"], ["longitude", 120.2802563], ["latitude", 14.81806987], ["created_at", "2024-07-29 11:24:13.040089"], ["updated_at", "2024-07-29 11:24:13.040089"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlce Create (1.3ms)[0m  [1m[32mINSERT INTO "plces" ("name", "longitude", "latitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Xionwei Technology Co. Ltd. Inc"], ["longitude", 120.9858286], ["latitude", 14.58206095], ["created_at", "2024-07-29 11:24:13.050440"], ["updated_at", "2024-07-29 11:24:13.050440"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlce Create (0.8ms)[0m  [1m[32mINSERT INTO "plces" ("name", "longitude", "latitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "NewLink Pacific Limited"], ["longitude", 120.9407012], ["latitude", 14.32646263], ["created_at", "2024-07-29 11:24:13.053015"], ["updated_at", "2024-07-29 11:24:13.053015"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlce Create (0.7ms)[0m  [1m[32mINSERT INTO "plces" ("name", "longitude", "latitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Pride Fortune Limited"], ["longitude", 121.0121498], ["latitude", 14.5516501], ["created_at", "2024-07-29 11:24:13.056290"], ["updated_at", "2024-07-29 11:24:13.056290"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlce Create (0.8ms)[0m  [1m[32mINSERT INTO "plces" ("name", "longitude", "latitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "OLE Group International Limited"], ["longitude", 121.0145806], ["latitude", 14.5556452], ["created_at", "2024-07-29 11:24:13.058155"], ["updated_at", "2024-07-29 11:24:13.058155"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlce Create (2.0ms)[0m  [1m[32mINSERT INTO "plces" ("name", "longitude", "latitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Prestige IOM Limited"], ["longitude", 121.0197153], ["latitude", 14.55859484], ["created_at", "2024-07-29 11:24:13.060026"], ["updated_at", "2024-07-29 11:24:13.060026"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlce Create (0.7ms)[0m  [1m[32mINSERT INTO "plces" ("name", "longitude", "latitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Wilshire Worldwide Company Limited"], ["longitude", 120.991172], ["latitude", 14.53571634], ["created_at", "2024-07-29 11:24:13.063366"], ["updated_at", "2024-07-29 11:24:13.063366"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlce Create (0.6ms)[0m  [1m[32mINSERT INTO "plces" ("name", "longitude", "latitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Wanfang Technology Management Limited"], ["longitude", 121.0197153], ["latitude", 14.55859484], ["created_at", "2024-07-29 11:24:13.065044"], ["updated_at", "2024-07-29 11:24:13.065044"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlce Create (2.6ms)[0m  [1m[32mINSERT INTO "plces" ("name", "longitude", "latitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Giant Gains Solutions Inc."], ["longitude", 121.0142257], ["latitude", 14.55788729], ["created_at", "2024-07-29 11:24:13.067100"], ["updated_at", "2024-07-29 11:24:13.067100"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlce Create (0.6ms)[0m  [1m[32mINSERT INTO "plces" ("name", "longitude", "latitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Full Strength Trading Limited"], ["longitude", 121.0145998], ["latitude", 14.55463749], ["created_at", "2024-07-29 11:24:13.070696"], ["updated_at", "2024-07-29 11:24:13.070696"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlce Create (0.6ms)[0m  [1m[32mINSERT INTO "plces" ("name", "longitude", "latitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Swanston Asia Inc."], ["longitude", 121.0128556], ["latitude", 14.56515615], ["created_at", "2024-07-29 11:24:13.072282"], ["updated_at", "2024-07-29 11:24:13.072282"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlce Create (0.9ms)[0m  [1m[32mINSERT INTO "plces" ("name", "longitude", "latitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Don Tencess Asian Services Solution Inc."], ["longitude", 120.9841271], ["latitude", 14.57146665], ["created_at", "2024-07-29 11:24:13.073871"], ["updated_at", "2024-07-29 11:24:13.073871"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlce Create (0.7ms)[0m  [1m[32mINSERT INTO "plces" ("name", "longitude", "latitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Vertex Digital Entertainment Technologies Inc."], ["longitude", 120.9897065], ["latitude", 14.5340875], ["created_at", "2024-07-29 11:24:13.076041"], ["updated_at", "2024-07-29 11:24:13.076041"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlce Create (5.1ms)[0m  [1m[32mINSERT INTO "plces" ("name", "longitude", "latitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Winherld Entertainment World Limited"], ["longitude", 120.9912175], ["latitude", 14.53620046], ["created_at", "2024-07-29 11:24:13.077794"], ["updated_at", "2024-07-29 11:24:13.077794"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlce Create (1.0ms)[0m  [1m[32mINSERT INTO "plces" ("name", "longitude", "latitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Blue Frog Contents & Support Inc."], ["longitude", 123.9100582], ["latitude", 10.33298014], ["created_at", "2024-07-29 11:24:13.084011"], ["updated_at", "2024-07-29 11:24:13.084011"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlce Create (0.6ms)[0m  [1m[32mINSERT INTO "plces" ("name", "longitude", "latitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Jolie Investments Limited"], ["longitude", 123.9351659], ["latitude", 10.32238746], ["created_at", "2024-07-29 11:24:13.086108"], ["updated_at", "2024-07-29 11:24:13.086108"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlce Create (0.6ms)[0m  [1m[32mINSERT INTO "plces" ("name", "longitude", "latitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Sohu Expert Int’l Management Solutions Inc."], ["longitude", 120.9845569], ["latitude", 14.59068893], ["created_at", "2024-07-29 11:24:13.087638"], ["updated_at", "2024-07-29 11:24:13.087638"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlce Create (0.5ms)[0m  [1m[32mINSERT INTO "plces" ("name", "longitude", "latitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Micro Info Systems Ltd"], ["longitude", 121.0197153], ["latitude", 14.55859484], ["created_at", "2024-07-29 11:24:13.089840"], ["updated_at", "2024-07-29 11:24:13.089840"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlce Create (0.5ms)[0m  [1m[32mINSERT INTO "plces" ("name", "longitude", "latitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "King Rich International Group Limited"], ["longitude", 121.0197153], ["latitude", 14.55859484], ["created_at", "2024-07-29 11:24:13.091241"], ["updated_at", "2024-07-29 11:24:13.091241"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlce Create (0.5ms)[0m  [1m[32mINSERT INTO "plces" ("name", "longitude", "latitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Most Success International Group Limited"], ["longitude", 121.0076075], ["latitude", 14.53243666], ["created_at", "2024-07-29 11:24:13.092551"], ["updated_at", "2024-07-29 11:24:13.092551"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlce Create (1.1ms)[0m  [1m[32mINSERT INTO "plces" ("name", "longitude", "latitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "High Zone Capital Investment Group Limited"], ["longitude", 121.0197153], ["latitude", 14.55859484], ["created_at", "2024-07-29 11:24:13.094102"], ["updated_at", "2024-07-29 11:24:13.094102"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlce Create (0.6ms)[0m  [1m[32mINSERT INTO "plces" ("name", "longitude", "latitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Cosmic Ace Holdings Ltd."], ["longitude", 120.2988693], ["latitude", 14.82396991], ["created_at", "2024-07-29 11:24:13.096270"], ["updated_at", "2024-07-29 11:24:13.096270"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlce Create (0.5ms)[0m  [1m[32mINSERT INTO "plces" ("name", "longitude", "latitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Smile World Global Limited"], ["longitude", 121.0197153], ["latitude", 14.55859484], ["created_at", "2024-07-29 11:24:13.098034"], ["updated_at", "2024-07-29 11:24:13.098034"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlce Create (0.5ms)[0m  [1m[32mINSERT INTO "plces" ("name", "longitude", "latitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Riesling Capital Limited"], ["longitude", 120.9436459], ["latitude", 14.42840723], ["created_at", "2024-07-29 11:24:13.099387"], ["updated_at", "2024-07-29 11:24:13.099387"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlce Create (0.5ms)[0m  [1m[32mINSERT INTO "plces" ("name", "longitude", "latitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Kirschner Games International Inc."], ["longitude", 121.0445906], ["latitude", 14.24230168], ["created_at", "2024-07-29 11:24:13.100687"], ["updated_at", "2024-07-29 11:24:13.100687"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlce Create (0.5ms)[0m  [1m[32mINSERT INTO "plces" ("name", "longitude", "latitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Saint Wealth Ltd."], ["longitude", 120.5220708], ["latitude", 15.19302108], ["created_at", "2024-07-29 11:24:13.101992"], ["updated_at", "2024-07-29 11:24:13.101992"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlce Create (0.5ms)[0m  [1m[32mINSERT INTO "plces" ("name", "longitude", "latitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Tech Innovation Management Limited"], ["longitude", 120.9825079], ["latitude", 14.57365339], ["created_at", "2024-07-29 11:24:13.103462"], ["updated_at", "2024-07-29 11:24:13.103462"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlce Create (0.5ms)[0m  [1m[32mINSERT INTO "plces" ("name", "longitude", "latitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Single Yard Holdings Ltd."], ["longitude", 120.9911208], ["latitude", 14.54890355], ["created_at", "2024-07-29 11:24:13.104887"], ["updated_at", "2024-07-29 11:24:13.104887"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlce Create (2.2ms)[0m  [1m[32mINSERT INTO "plces" ("name", "longitude", "latitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Synchronization Anywhere for You Inc."], ["longitude", 120.9906936], ["latitude", 14.53449675], ["created_at", "2024-07-29 11:24:13.108679"], ["updated_at", "2024-07-29 11:24:13.108679"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlce Create (0.6ms)[0m  [1m[32mINSERT INTO "plces" ("name", "longitude", "latitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "SA Dreamtech Group International Technology"], ["longitude", 121.0101568], ["latitude", 14.55910681], ["created_at", "2024-07-29 11:24:13.112042"], ["updated_at", "2024-07-29 11:24:13.112042"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlce Create (0.5ms)[0m  [1m[32mINSERT INTO "plces" ("name", "longitude", "latitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Benestar Co., Ltd."], ["longitude", 121.0096525], ["latitude", 14.43570773], ["created_at", "2024-07-29 11:24:13.113517"], ["updated_at", "2024-07-29 11:24:13.113517"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlce Create (0.7ms)[0m  [1m[32mINSERT INTO "plces" ("name", "longitude", "latitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "BestBetInNet Limited"], ["longitude", 121.0101568], ["latitude", 14.55910681], ["created_at", "2024-07-29 11:24:13.115542"], ["updated_at", "2024-07-29 11:24:13.115542"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlce Create (1.1ms)[0m  [1m[32mINSERT INTO "plces" ("name", "longitude", "latitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Blessed Dragon Limited"], ["longitude", 123.943805], ["latitude", 10.33329778], ["created_at", "2024-07-29 11:24:13.117171"], ["updated_at", "2024-07-29 11:24:13.117171"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlce Create (0.6ms)[0m  [1m[32mINSERT INTO "plces" ("name", "longitude", "latitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Dragon Wealth System Inc."], ["longitude", 121.0501275], ["latitude", 14.57101572], ["created_at", "2024-07-29 11:24:13.119493"], ["updated_at", "2024-07-29 11:24:13.119493"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlce Create (0.6ms)[0m  [1m[32mINSERT INTO "plces" ("name", "longitude", "latitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Easy Access Limited"], ["longitude", 121.027466], ["latitude", 14.55802443], ["created_at", "2024-07-29 11:24:13.121465"], ["updated_at", "2024-07-29 11:24:13.121465"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlce Create (0.6ms)[0m  [1m[32mINSERT INTO "plces" ("name", "longitude", "latitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Full Advantage Investments Limited"], ["longitude", 120.9891158], ["latitude", 14.52143705], ["created_at", "2024-07-29 11:24:13.122935"], ["updated_at", "2024-07-29 11:24:13.122935"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlce Create (0.5ms)[0m  [1m[32mINSERT INTO "plces" ("name", "longitude", "latitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Gambol Leisure and Amusement Inc."], ["longitude", 123.9204139], ["latitude", 10.3415529], ["created_at", "2024-07-29 11:24:13.124658"], ["updated_at", "2024-07-29 11:24:13.124658"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlce Create (0.6ms)[0m  [1m[32mINSERT INTO "plces" ("name", "longitude", "latitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Genx Sports International Limited"], ["longitude", 121.0535243], ["latitude", 14.63171912], ["created_at", "2024-07-29 11:24:13.126302"], ["updated_at", "2024-07-29 11:24:13.126302"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlce Create (0.6ms)[0m  [1m[32mINSERT INTO "plces" ("name", "longitude", "latitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Giant Isle Group Limited"], ["longitude", 121.0034526], ["latitude", 14.53445025], ["created_at", "2024-07-29 11:24:13.127955"], ["updated_at", "2024-07-29 11:24:13.127955"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlce Create (0.5ms)[0m  [1m[32mINSERT INTO "plces" ("name", "longitude", "latitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Golden Dreamer Holdings Limited"], ["longitude", 120.9888096], ["latitude", 14.53690529], ["created_at", "2024-07-29 11:24:13.129590"], ["updated_at", "2024-07-29 11:24:13.129590"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlce Create (0.5ms)[0m  [1m[32mINSERT INTO "plces" ("name", "longitude", "latitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Great-Gaming International Corp."], ["longitude", 123.9342578], ["latitude", 10.33608255], ["created_at", "2024-07-29 11:24:13.130938"], ["updated_at", "2024-07-29 11:24:13.130938"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlce Create (0.6ms)[0m  [1m[32mINSERT INTO "plces" ("name", "longitude", "latitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Hk Feibiai International Group Limited"], ["longitude", 121.0304448], ["latitude", 14.45991551], ["created_at", "2024-07-29 11:24:13.132299"], ["updated_at", "2024-07-29 11:24:13.132299"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlce Create (0.7ms)[0m  [1m[32mINSERT INTO "plces" ("name", "longitude", "latitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Infiniweb Technology Inc."], ["longitude", 120.9968705], ["latitude", 14.54307615], ["created_at", "2024-07-29 11:24:13.134766"], ["updated_at", "2024-07-29 11:24:13.134766"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlce Create (0.7ms)[0m  [1m[32mINSERT INTO "plces" ("name", "longitude", "latitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Lebo Limited"], ["longitude", 121.0197153], ["latitude", 14.55859484], ["created_at", "2024-07-29 11:24:13.136610"], ["updated_at", "2024-07-29 11:24:13.136610"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlce Create (0.5ms)[0m  [1m[32mINSERT INTO "plces" ("name", "longitude", "latitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Philippine Cockfighting International Inc."], ["longitude", 120.6101334], ["latitude", 15.20231644], ["created_at", "2024-07-29 11:24:13.138173"], ["updated_at", "2024-07-29 11:24:13.138173"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlce Create (0.6ms)[0m  [1m[32mINSERT INTO "plces" ("name", "longitude", "latitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Philsync Technologies Limited"], ["longitude", 120.6726595], ["latitude", 15.02278735], ["created_at", "2024-07-29 11:24:13.139949"], ["updated_at", "2024-07-29 11:24:13.139949"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlce Create (0.5ms)[0m  [1m[32mINSERT INTO "plces" ("name", "longitude", "latitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Shaw Global Leisure Ltd."], ["longitude", 121.0290849], ["latitude", 14.59329773], ["created_at", "2024-07-29 11:24:13.141411"], ["updated_at", "2024-07-29 11:24:13.141411"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlce Create (0.6ms)[0m  [1m[32mINSERT INTO "plces" ("name", "longitude", "latitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "66 Global Solutions Inc."], ["longitude", 120.9927396], ["latitude", 14.54159311], ["created_at", "2024-07-29 11:24:13.142775"], ["updated_at", "2024-07-29 11:24:13.142775"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlce Create (0.5ms)[0m  [1m[32mINSERT INTO "plces" ("name", "longitude", "latitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "888 World Solutions Inc."], ["longitude", 0.0], ["latitude", 0.0], ["created_at", "2024-07-29 11:24:13.144395"], ["updated_at", "2024-07-29 11:24:13.144395"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlce Create (0.5ms)[0m  [1m[32mINSERT INTO "plces" ("name", "longitude", "latitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Bigger Success Limited"], ["longitude", 0.0], ["latitude", 0.0], ["created_at", "2024-07-29 11:24:13.145714"], ["updated_at", "2024-07-29 11:24:13.145714"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlce Create (0.6ms)[0m  [1m[32mINSERT INTO "plces" ("name", "longitude", "latitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Hongsheng Gaming Technology"], ["longitude", 120.5486535], ["latitude", 15.29821974], ["created_at", "2024-07-29 11:24:13.147236"], ["updated_at", "2024-07-29 11:24:13.147236"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlce Create (0.5ms)[0m  [1m[32mINSERT INTO "plces" ("name", "longitude", "latitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Lucky South99 Outsourcing Inc."], ["longitude", 120.5523085], ["latitude", 15.13565838], ["created_at", "2024-07-29 11:24:13.148654"], ["updated_at", "2024-07-29 11:24:13.148654"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlce Create (0.5ms)[0m  [1m[32mINSERT INTO "plces" ("name", "longitude", "latitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "TG System Resources Limited Corp."], ["longitude", 0.0], ["latitude", 0.0], ["created_at", "2024-07-29 11:24:13.149969"], ["updated_at", "2024-07-29 11:24:13.149969"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlce Create (0.6ms)[0m  [1m[32mINSERT INTO "plces" ("name", "longitude", "latitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Axria Technologies Inc."], ["longitude", 121.0142471], ["latitude", 14.55789767], ["created_at", "2024-07-29 11:24:13.151272"], ["updated_at", "2024-07-29 11:24:13.151272"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlce Create (0.7ms)[0m  [1m[32mINSERT INTO "plces" ("name", "longitude", "latitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Daxifa Corporation"], ["longitude", 121.0280281], ["latitude", 14.64625179], ["created_at", "2024-07-29 11:24:13.152712"], ["updated_at", "2024-07-29 11:24:13.152712"]]
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlce Create (0.6ms)[0m  [1m[32mINSERT INTO "plces" ("name", "longitude", "latitude", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "KNW Technology Inc."], ["longitude", 121.0499245], ["latitude", 14.57574526], ["created_at", "2024-07-29 11:24:13.156174"], ["updated_at", "2024-07-29 11:24:13.156174"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mPlce Load (0.4ms)[0m  [1m[34mSELECT "plces".* FROM "plces" /* loading for pp */ LIMIT $1[0m  [["LIMIT", 11]]
+Started GET "/" for 127.0.0.1 at 2024-07-29 13:43:22 +0200
+Processing by PlcesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering plces/index.html.erb within layouts/application
+  [1m[36mPlce Pluck (3.8ms)[0m  [1m[34mSELECT "plces"."latitude", "plces"."longitude" FROM "plces"[0m
+  ↳ app/views/plces/index.html.erb:2
+  Rendered plces/index.html.erb within layouts/application (Duration: 89.5ms | Allocations: 4008)
+  Rendered layout layouts/application.html.erb (Duration: 97.9ms | Allocations: 6094)
+Completed 200 OK in 106ms (Views: 54.1ms | ActiveRecord: 45.4ms | Allocations: 7704)
+
+
+Started GET "/anime/12345" for 127.0.0.1 at 2024-07-29 13:58:41 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/anime/12345"):
+  
+Started GET "/" for 127.0.0.1 at 2024-07-29 13:58:45 +0200
+Processing by PlcesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering plces/index.html.erb within layouts/application
+  [1m[36mPlce Pluck (125.6ms)[0m  [1m[34mSELECT "plces"."latitude", "plces"."longitude" FROM "plces"[0m
+  ↳ app/views/plces/index.html.erb:2
+  Rendered plces/index.html.erb within layouts/application (Duration: 135.8ms | Allocations: 3630)
+  Rendered layout layouts/application.html.erb (Duration: 151.9ms | Allocations: 5219)
+Completed 200 OK in 155ms (Views: -6.8ms | ActiveRecord: 160.1ms | Allocations: 5443)
+
+
+Started GET "/" for 127.0.0.1 at 2024-07-29 14:29:45 +0200
+Processing by PlcesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering plces/index.html.erb within layouts/application
+  [1m[36mPlce Pluck (400.9ms)[0m  [1m[34mSELECT "plces"."latitude", "plces"."longitude" FROM "plces"[0m
+  ↳ app/views/plces/index.html.erb:2
+  Rendered plces/index.html.erb within layouts/application (Duration: 448.0ms | Allocations: 3577)
+  Rendered layout layouts/application.html.erb (Duration: 486.7ms | Allocations: 5288)
+Completed 200 OK in 517ms (Views: 18.1ms | ActiveRecord: 475.1ms | Allocations: 5512)
+
+
+  [1m[35m (3.1ms)[0m  [1m[35mCREATE DATABASE "leaflet_map_development" ENCODING = 'unicode'[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE DATABASE "leaflet_map_test" ENCODING = 'unicode'[0m
+Started GET "/" for 127.0.0.1 at 2024-08-07 22:48:15 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (15.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PlcesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering plces/index.html.erb within layouts/application
+  [1m[36mPlce Pluck (1.0ms)[0m  [1m[34mSELECT "plces"."latitude", "plces"."longitude" FROM "plces"[0m
+  ↳ app/views/plces/index.html.erb:2
+  Rendered plces/index.html.erb within layouts/application (Duration: 22.3ms | Allocations: 4709)
+  Rendered layout layouts/application.html.erb (Duration: 565.7ms | Allocations: 105411)
+Completed 200 OK in 582ms (Views: 551.7ms | ActiveRecord: 17.0ms | Allocations: 115197)
+
+
