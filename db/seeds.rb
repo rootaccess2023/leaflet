@@ -10,7 +10,7 @@ CSV.foreach(file_path, headers: true) do |row|
   Plce.create!(
     name: name,
     latitude: latitude,
-    lo.ngitude: longitude
+    longitude: longitude
   )
 end
 
